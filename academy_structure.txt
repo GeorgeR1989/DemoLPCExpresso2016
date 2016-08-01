@@ -1,0 +1,13 @@
+User: RosianRad         Module: Joystick, Integration
+User: tudorbradescu     Module: OLED, Debouncer
+User: FlorinBrumar      Module: Temperature, Pushbutton
+User: dorin-deac        Module: RGB LED, Rottary button
+User: IoanBobar         Module: Buzzer, RGB LED
+User: vladflorica93     Module: Segment display module
+
+Repo name: DemoLPCExpresso2016
+
+
+
+
+
