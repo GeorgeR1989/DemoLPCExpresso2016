@@ -1,0 +1,21 @@
+Object name: Source code of module OLED: 
+
+display.c / Commit ID: 3889bd6
+display.h / Commit ID: 3889bd6
+
+Participants:
+Vlad Florica
+Ioan Bobar
+Dorin Deac
+Florin Brumar
+Tudor Bradescu
+Rosian Rad
+George Robu (Moderator)
+
+Findings:
+1. [Functional improvement] Correct the includes from the display.c file (lines: 10-23)
+2. [Improve presentation] Add relevant comments for the prototyped functions in file display.h (lines 27,, 28)
+3. [Improve presentation] Remove unnecessary spaces from file display.h (lines 20-25) and file display.c (lines 7-9, 18-21)
+4. [Improve presentation] Add relevant comments for functions intToString, SysTick_Handler, getTicks
+5. [Functional improvement] Prior to integration, remove initialization calls and includes from the modules that communicate with the OLED display
+6. [Functional improvement] Remove the temp_read() stub function from the code and use the interface function of the TEMP module instead
