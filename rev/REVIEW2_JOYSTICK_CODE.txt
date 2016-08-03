@@ -1,0 +1,18 @@
+Object name: Source code of module JOYSTICK: 
+
+joystickPosition.c / Commit ID: 2f736d4
+joystickPosition.h / Commit ID: 2f736d4
+
+Participants:
+Ioan Bobar (Moderator)
+Rosian Rad
+George Robu
+
+Findings:
+1.[Improve presentation] Add relevant comments for the prototyped functions in file joystickPosition.h (line 17)
+2.[Open point] Check if library pca9532.h is neccesary in file joystickPosition.h (line 15)
+3.[Functional improvement] Prior to integration, remove initialization calls and includes from the modules that communicate with the JOYSTICK
+4.[Functional improvement] Add parameters types for function joystickPosition(line 17) in file joystickPosition.h
+5.[Functional improvement] Change if case in switch case in file joystickPosition.c (line 21-39)
+6.[Functional improvement] Remove variable joystickState in file joystickPosition.c (line 12) and use function joystick_read() in the switch mention on the finding #5
+7.[Functional improvement] Move the variable sendjoystickPosition (joystickPosition.c line 13) inside of the function joystickPosition(). 
