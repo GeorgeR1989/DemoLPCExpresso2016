@@ -9,10 +9,11 @@ Rosian Rad
 George Robu
 
 Findings:
-1.[Improve presentation] Add relevant comments for the prototyped functions in file joystickPosition.h (line 17)
-2.[Open point] Check if library pca9532.h is neccesary in file joystickPosition.h (line 15)
+1.[Improve presentation] Add relevant comments for the prototyped functions in file joystickPosition.h (line 17)  //Implemented in commit f6d44d8
+2.[Open point] Check if library pca9532.h is neccesary in file joystickPosition.h (line 15)  //Removed due to being unnecessary in commit f6d44d8
 3.[Functional improvement] Prior to integration, remove initialization calls and includes from the modules that communicate with the JOYSTICK
-4.[Functional improvement] Add parameters types for function joystickPosition(line 17) in file joystickPosition.h
-5.[Functional improvement] Change if case in switch case in file joystickPosition.c (line 21-39)
-6.[Functional improvement] Remove variable joystickState in file joystickPosition.c (line 12) and use function joystick_read() in the switch mention on the finding #5
-7.[Functional improvement] Move the variable sendjoystickPosition (joystickPosition.c line 13) inside of the function joystickPosition(). 
+4.[Functional improvement] Add parameters types for function joystickPosition(line 17) in file joystickPosition.h  //Implemented in commit f6d44d8
+5.[Functional improvement] Change if case in switch case in file joystickPosition.c (line 21-39)  //Implemented in commit f6d44d8
+6.[Functional improvement] Remove variable joystickState in file joystickPosition.c (line 12) and use function joystick_read() in the switch mention on the finding #5  //Implemented in commit f6d44d8
+7.[Functional improvement] Move the variable sendjoystickPosition (joystickPosition.c line 13) inside of the function joystickPosition().   //Implemented in commit f6d44d8
+8.[Open point] Check if library stdio.h is neccesary in file joystickPosition.h (line 12)  //Removed due to being unnecessary in commit f6d44d8
