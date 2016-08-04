@@ -1,0 +1,80 @@
+OLED display handling module
+
+The module should be able to receive the information from other modules(temperature module, pushbutton module) and to display it.
+
+Display name : UG-9664HSWAG01
+
+Display Specifications
+ 1)Display Mode:     Passive Matric
+ 2)Display Color:    Monochrome(White)
+ 3)Drive Duty:       1/64 Duty
+ 4)Number of Pixels: 96 x 64
+
+
+
+Notable Functions:
+
+   intToString(int value, uint8_t* pBuf, uint32_t len, uint32_t base)  
+
+- converts an integer value to a string 
+- the buffer must not be null and at least have a length of 2 to handle one digit and null-terminator
+- a valid base cannot be less than 2 or larger than 36 a base value of 2 means binary representation. A value of 1 would mean only zeros a base larger than 36 can only be used if a larger alphabet were used.
+
+   void SysTick_Handler(void) 
+  
+-interupt routine called at every clock tick that increments msTicks by 1 
+
+   uint32_t getTicks(void) 
+   
+-returns the number of clock ticks(msTicks)
+
+   void init_display (void)
+
+-initializes the oled display on the board(setup function)
+-contains  GPIOInit(); init_timer32(0, 10); UARTInit(115200);  I2CInit( (uint32_t)I2CMASTER, 0 ); oled_init();  temp_init (&getTicks); oled_clearScreen(OLED_COLOR_WHITE);oled_putString(...);
+
+   void temp_display(void)
+
+-displays on the OLED the temperature recieved from the temperature module
+-contains  oled_fillRect(); oled_putString();delay32Ms(); temp_read();
+---------------------------------------------------------------------------------------------
+Main display functions
+---------------------------------------------------------------------------------------------
+   void oled_putPixel(uint8_t x, uint8_t y, oled_color_t color)
+
+ -draw one pixel on the display
+ -params:
+    x - x position
+    y - y position
+    color - color of the pixel
+
+
+   void oled_rect(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, oled_color_t color)
+
+-draw a rectangle on the display starting at x0,y0 and ending at x1,y1
+-Params:
+    x0 - start x position
+    y0 - start y position
+    x1 - end x position
+    y1 - end y position
+    color - color of the rectangle
+
+   void oled_line(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, oled_color_t color)
+
+-draw a line on the display starting at x0,y0 and ending at x1,y1
+-params:
+    x0 - start x position
+    y0 - start y position
+    x1 - end x position
+    y1 - end y position
+    color - color of the line
+
+   void oled_clearScreen(oled_color_t color)
+
+-clear the entire screen
+-params:
+   color - color to fill the screen with
+ 
+	
+
+
