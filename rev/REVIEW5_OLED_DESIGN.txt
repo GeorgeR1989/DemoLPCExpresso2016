@@ -1,0 +1,25 @@
+Object name: Design file for OLED module
+
+
+display_d.txt / Commit ID: cd12651  
+
+
+Participants:
+Vlad Florica
+George Robu
+Florin Brumar (Moderator)
+Dorin Deac
+Ionut Bobar
+Rosian Rad
+Tudor Bradescu
+...
+
+Findings:
+1. [Improve presentation] Modify the display color from Monochrome(White) to black and white (line 9)
+2. [Improve presentation] Refer to color parameter with defines called OLED_COLOR_WHITE and OLED_COLOR_BLACK (line 49)
+
+
+Types of findings:
+[Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
+[Improve presentation] = Used in case aditional information must be used. The code works as it is, but it's harder to understand
+[Open point] = Used for questions unaswered during the review process
