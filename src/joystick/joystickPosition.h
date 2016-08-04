@@ -9,11 +9,9 @@
 #define JOYSTICKPOSITION_H_
 
 #include "type.h"
-#include "stdio.h"
 #include "gpio.h"
 #include "joystick.h"
-#include "pca9532.h"
 
-char joystickPosition();
+char joystickPosition(void);  //Returns a relevant number corresponding to the joysticks position
 
 #endif /* JOYSTICKPOSITION_H_ */
