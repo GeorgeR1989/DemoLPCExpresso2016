@@ -3,30 +3,13 @@ File name: display.c
 Date:8/2/2016
 Description: OLED temperature display resource file
 */
-
-
-
-
-#include "mcu_regs.h"
-#include "type.h"
-#include "uart.h"
-#include "stdio.h"
-#include "timer32.h"
-#include "i2c.h"
-#include "gpio.h"
-#include "ssp.h"
-#include "adc.h"
-
-
-
-#include "oled.h"
-#include "temp.h"
+#include "display.h"
 
 static uint32_t msTicks = 0;
 static uint8_t buf[10];
 int32_t t = 0;
 
-static void intToString(int value, uint8_t* pBuf, uint32_t len, uint32_t base)
+static void intToString(int value, uint8_t* pBuf, uint32_t len, uint32_t base)  //converts to string an integer value
 
 {
     static const char* pAscii = "0123456789abcdefghijklmnopqrstuvwxyz";
@@ -79,10 +62,10 @@ static void intToString(int value, uint8_t* pBuf, uint32_t len, uint32_t base)
     return;
 
 }
-void SysTick_Handler(void) {
+void SysTick_Handler(void) {  //counts the number of clock ticks
     msTicks++;
 }
-static uint32_t getTicks(void)
+static uint32_t getTicks(void) //return the number of clock ticks
 {
     return msTicks;
 }

@@ -12,17 +12,8 @@ Description: OLED temperature display header file
 #include "gpio.h"
 #include "ssp.h"
 #include "adc.h"
-
-
-
 #include "oled.h"
 #include "temp.h"
 
-
-
-
-
-
-
-void init_display (void);
-void temp_display(void);
+void init_display (void); //initializes the oled display on the board(setup function)
+void temp_display(void);  //displays the current temperature from the temperature sensor (while(1) function)
