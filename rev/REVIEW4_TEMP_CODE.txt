@@ -1,0 +1,27 @@
+Object name: Source code of module TEMP and PUSH_BUTTON modules:
+
+temperature.c / Commit ID: 5230088
+temperature.h / Commit ID: 5230088 
+
+Participants:
+Florin Brumar
+Vlad Florica
+Dorin Deac (Moderator)
+
+Findings:
+1.[Improve presentation] Add description of general content for files temperature.c and temperature.h
+2.[Improve presentation] Add relevant comments for read_button_status and temp_conversion functions from temperature.h file (lines 22, 23)
+3.[Improve presentation] Specify the correspondent pins for button_1 and button_2 variables in file temperature.c (lines 20, 21)
+4.[Improve presentation] Specify the methods of conversion implemented in function temp_conversion  in temperature.c (lines 72-81)
+5.[Functional improvement] Implement initial functionality for temperature display
+6.[Functional improvement] Eliminate t variable from temp_conversion and call temp_read() in conversion implementation
+7.[Functional improvement] Use a bool variable to change conversion type or a switch
+8.[Functional improvement] Remove the test code from module implementation in temperature.c (lines 91 -117)
+9.[Functional improvement] Eliminate delay from function temp_conversion in temperature.c (line 85) and timer32 header from temperature.h (line 20)
+10.[Functional improvement] Prior to integration, remove initialization calls and includes from the modules that communicate with the TEMP module
+11.[Functional improvement] Create different source and header files for PUSH_BUTTON module 
+
+Types of findings:
+[Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
+[Improve presentation] = Used in case aditional information must be used. The code works as it is, but it's harder to understand
+[Open point] = Used for questions unaswered during the review process
