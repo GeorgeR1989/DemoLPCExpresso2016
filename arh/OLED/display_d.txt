@@ -6,7 +6,7 @@ Display name : UG-9664HSWAG01
 
 Display Specifications
  1)Display Mode:     Passive Matric
- 2)Display Color:    Monochrome(White)
+ 2)Display Color:    Monochrome(Black & White)
  3)Drive Duty:       1/64 Duty
  4)Number of Pixels: 96 x 64
 
@@ -46,7 +46,7 @@ Main display functions
  -params:
     x - x position
     y - y position
-    color - color of the pixel
+    color - OLED_COLOR_WHITE or OLED_COLOR_BLACK
 
 
    void oled_rect(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, oled_color_t color)
@@ -57,7 +57,7 @@ Main display functions
     y0 - start y position
     x1 - end x position
     y1 - end y position
-    color - color of the rectangle
+    color - color of the rectangle(OLED_COLOR_WHITE or OLED_COLOR_BLACK)
 
    void oled_line(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, oled_color_t color)
 
@@ -67,13 +67,13 @@ Main display functions
     y0 - start y position
     x1 - end x position
     y1 - end y position
-    color - color of the line
+    color - color of the line(OLED_COLOR_WHITE or OLED_COLOR_BLACK)
 
    void oled_clearScreen(oled_color_t color)
 
 -clear the entire screen
 -params:
-   color - color to fill the screen with
+   color - color to fill the screen with(OLED_COLOR_WHITE or OLED_COLOR_BLACK)
  
 	
 
