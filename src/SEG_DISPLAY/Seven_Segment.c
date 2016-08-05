@@ -1,8 +1,7 @@
-/*
- * 7_Segment.c
- *
- * Created on: Aug 3, 2016
- * Author: vlad.florica
+/* Author: Vlad Florica
+ * File name: Seven_Segment.c
+ * Date:8/4/2016
+ * Description:7 Segment Display resource file
  */
 
 #include "Seven_Segment.h"
@@ -18,7 +17,4 @@ void ledSet(uint8_t rotVal)
 		led7seg_setChar(Displayed_Number, 0); // Function which send the value using SPI Protocol to Shift_Register
 
 	}
-
-
-
 }
