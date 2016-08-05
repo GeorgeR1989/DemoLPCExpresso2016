@@ -9,9 +9,9 @@ Bradescu Tudor (Moderator)
 Florica Vlad
 
 Findings:
-1. [Improve presentation] Module name at the beginning of the document 
-2. [Improve presentation] Spelling mistake at line 1
-3. [Improve presentation] Add a list of relevant functions contained in joystick_init()  
+1. [Improve presentation] Module name at the beginning of the document [Implemented in commit number  471dd9a]
+2. [Improve presentation] Spelling mistake at line 1    [Implemented in commit number  471dd9]              
+3. [Improve presentation] Add a list of relevant functions contained in joystick_init()  [Implemented in commit number  471dd9]
 
 Types of findings:
 [Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
