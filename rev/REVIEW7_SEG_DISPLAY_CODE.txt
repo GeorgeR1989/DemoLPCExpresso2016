@@ -1,0 +1,23 @@
+Object name: Source code of Segment Display module
+
+Seven_Segment.c / Commit ID: c7f0eb9  
+Seven_Segment.h / Commit ID: c7f0eb9  
+
+Participants:
+Vlad Florica
+Bradescu Tudor (Moderator)
+Rosian Rad
+
+Findings:
+1. [Improve presentation]Implement a program description of general content on lines 1-6 in file Seven_Segment.c and Seven_Segment.h
+2. [Improve presentation]Remove lines 21-23 in file Seven_Segment.c
+3. [Open point]Remove unnesecesary includes from header file
+4. [Functional improvement]Prior to integration, remove initialization calls and includes from the modules that communicate with the Segment display
+
+
+Types of findings:
+[Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
+[Improve presentation] = Used in case aditional information must be used. The code works as it is, but it's harder to understand
+[Open point] = Used for questions unaswered during the review process
+
+
