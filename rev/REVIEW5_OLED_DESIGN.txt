@@ -16,7 +16,9 @@ Tudor Bradescu
 
 Findings:
 1. [Improve presentation] Modify the display color from Monochrome(White) to black and white (line 9)[Implemented in commit number efb16c4]
-2. [Improve presentation] Refer to color parameter with defines called OLED_COLOR_WHITE and R (line 49)[Implemented in commit number efb16c4]
+2. [Improve presentation] Refer to color parameter with defines called OLED_COLOR_WHITE and OLED_COLOR_BLACK (line 49)[Implemented in commit number efb16c4]
+
+QA check: OK. Review closed
 
 
 Types of findings:
