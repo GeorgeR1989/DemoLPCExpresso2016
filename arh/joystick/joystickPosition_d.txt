@@ -1,4 +1,6 @@
-Unit used to read the joysticks position and send a numbers depending on its position:
+Object name: Design file for joystick module
+
+Unit used to read the joysticks position and sends a number depending on its position:
 
 1 - when is pressed up
 2 - when is is pressed right
@@ -13,25 +15,38 @@ The unit is going to be used together with the buzzer unit to change its frequen
 
 Functions:
 
-/******************************************************************************
+/*********************************************************************************************************************************
 
-joystickPosition() - Description:
-     				
-    				The joystick status.
+joystickPosition() - Description:    				
+    				  The joystick status.
   		     Returns:
-   				Returns a relevant number corresponding to the 
-				joysticks position.
+   				  Returns a relevant number corresponding to the 
+				  joysticks position.
 
-******************************************************************************/
+*********************************************************************************************************************************/
 
-/******************************************************************************
+/*********************************************************************************************************************************
 
 joystick_init() -  Description:
- 			    Initialize the Joystick Driver.
+ 			        Initialize the Joystick Driver.
+                   Returns:
+                           Nothing.
+*********************************************************************************************************************************/
 
-******************************************************************************/
+/*********************************************************************************************************************************
 
-/******************************************************************************
+GPIOSetDir( uint32_t portNum, uint32_t bitPosi, uint32_t dir ) - Descriptions:	
+                                                                               Set the direction in GPIO port.
+
+                                                                  Parameters:	
+                                                                               port num, bit position, direction (1 out, 0 input).
+                                                                  Returns:
+                                                    		
+                                                                               Nothing.
+
+*********************************************************************************************************************************/
+
+/*********************************************************************************************************************************
 
 joystick_read() - Description:
      				Read the joystick status.
@@ -41,4 +56,4 @@ joystick_read() - Description:
 				bit mask. More than one direction may be active 
 				at any given time (e.g. UP and RIGHT).
 
-******************************************************************************/
+*********************************************************************************************************************************/
