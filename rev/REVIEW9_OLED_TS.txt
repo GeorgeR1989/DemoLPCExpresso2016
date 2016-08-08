@@ -1,0 +1,19 @@
+Object name: Test specifications for OLED module testing
+
+display_test_spec.txt / Commit ID: b7dace9
+
+
+Participants:
+Rosian Rad (Moderator)
+Tudor Bradescu
+
+
+Findings:
+1.[Functional improvement] - Specify the resource files and steps that are going to be taken to implement the testing procedure.
+
+
+
+Types of findings:
+[Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
+[Improve presentation] = Used in case aditional information must be used. The code works as it is, but it's harder to understand
+[Open point] = Used for questions unaswered during the review process
