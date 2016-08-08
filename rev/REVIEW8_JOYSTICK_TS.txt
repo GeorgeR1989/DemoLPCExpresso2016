@@ -12,6 +12,8 @@ Brumar Florin (Moderator)
 Findings:
 No remarks found.
 
+QA check: OK. Review closed
+
 
 Types of findings:
 [Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
