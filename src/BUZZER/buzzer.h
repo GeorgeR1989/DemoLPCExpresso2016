@@ -2,8 +2,8 @@
 #define P1_2_HIGH() (LPC_GPIO1->DATA |= (0x1<<2))
 #define P1_2_LOW()  (LPC_GPIO1->DATA &= ~(0x1<<2))
 
-
-static uint32_t notes[] = {
+//Frequencies of notes
+static uint16_t notes[] = {
         2272, // A - 440 Hz
         2024, // B - 494 Hz
         3816, // C - 262 Hz
@@ -20,13 +20,7 @@ static uint32_t notes[] = {
         1275, // g - 784 Hz
 };
 
+void delayMS(uint16_t ); //delay to setup the duty cycle of PWM
+void playNote(uint16_t, uint16_t, uint16_t); //function control the buzzer
 
-
-void delayMS(uint32_t delayInMs);
-void playNote(uint32_t, uint32_t );
-void playNote2(uint32_t note, uint32_t durationMs);
-void initPWM(uint16_t);
-void startPWM(void);
-void stopPWM(void);
-void updatePWM( uint8_t, uint8_t);
 
