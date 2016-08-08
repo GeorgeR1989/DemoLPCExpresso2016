@@ -1,18 +1,16 @@
-Object name: Test specifications for joystick module testing
+Object name: Test specifications for OLED module testing
 
-joystickPosition_test_spec.txt / Commit ID: f684035
+display_test_spec.txt / Commit ID: b7dace9
 
 
 Participants:
-Rosian Rad
-George Robu
-Brumar Florin (Moderator)
+Rosian Rad (Moderator)
+Tudor Bradescu
 
 
 Findings:
-No remarks found.
+1.[Functional improvement] - Specify the resource files and steps that are going to be taken to implement the testing procedure.[Implemented in commit no.ee5d59f]
 
-QA check: OK. Review closed
 
 
 Types of findings:

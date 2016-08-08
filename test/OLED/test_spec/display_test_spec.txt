@@ -1,0 +1,17 @@
+Object name: Test specifications for OLED module testing
+
+/**************************************************************************************************************************************************************************************/
+
+Description: This module is going to be tested by virtually generating a temperature range from -99 to 99, and displaying it on the OLED.
+
+
+/**************************************************************************************************************************************************************************************/
+
+Instructions: To test the module, all of the files from OLED/test_res should be uploaded on the board, and display_test.c, which contaians the main function, should be run.
+
+The OLED  module will display a full range of integers from -99 to 99 with a 200ms delay between values.
+		
+
+
+
+
