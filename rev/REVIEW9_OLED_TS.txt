@@ -9,7 +9,7 @@ Tudor Bradescu
 
 
 Findings:
-1.[Functional improvement] - Specify the resource files and steps that are going to be taken to implement the testing procedure.
+1.[Functional improvement] - Specify the resource files and steps that are going to be taken to implement the testing procedure.[Implemented in commit no.ee5d59f]
 
 
 
