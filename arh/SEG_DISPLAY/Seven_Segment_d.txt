@@ -1,0 +1,67 @@
+** Author: Vlad Florica
+** File name: Seven_Segment_d.c
+** Date:8/8/2016
+** Description: 7 Segment Display design file. 
+
+
+This module is use for displaying numbers from 0-9 on seven segment display.
+
+
+This unit it`s going to be used together with rotary_encoder module.
+
+
+
+
+Functions:
+/******************************************************************************
+** Function name: void init_timer32(uint8_t timer_num, uint32_t timerInterval);
+**
+** Descriptions:  Initialize timer, set timer interval, reset timer,
+**		  install timer interrupt handler
+**
+** Parameters:	  timer number and timer interval
+**  
+******************************************************************************/
+
+void init_timer32(uint8_t timer_num, uint32_t timerInterval);
+/*****************************************************************************
+** Function name: void SSPInit(void)
+**	
+** Descriptions:  SSP port initialization routine
+** 
+*****************************************************************************/
+
+/*****************************************************************************
+** Function name: void led7seg_init (void)
+**
+** Description:   Initialize the 7 segment Display
+**
+*****************************************************************************/
+
+/*****************************************************************************
+** Function name: void led7seg_setChar(uint8_t ch, uint32_t rawMode)
+**
+** Description:   Draw a character on the 7 segment display
+**    
+** Parameters:
+**   [in] ch -      character interpreted as an ascii character.
+**   [in] rawMode - set to TRUE to use raw mode. In this case the ch data
+**                  won't be interpreted as an ascii character.
+**
+*****************************************************************************/
+
+/*****************************************************************************
+** Function name: void SSPSend( uint8_t *buf, uint32_t Length )
+**
+** Description:	  Send a block of data to the SSP port, the 
+**                first parameter is the buffer pointer, the 2nd 
+**		  parameter is the block length.
+**
+** Parameters:	  buffer pointer, and the block length
+** 
+*****************************************************************************/
+
+
+
+
+ 
