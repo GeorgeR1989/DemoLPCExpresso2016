@@ -9,9 +9,9 @@ Bradescu Tudor (Moderator)
 Rosian Rad
 
 Findings:
-1. [Improve presentation]Implement a program description of general content on lines 1-6 in file Seven_Segment.c and Seven_Segment.h
-2. [Improve presentation]Remove lines 21-23 in file Seven_Segment.c
-3. [Open point]Remove unnesecesary includes from header file
+1. [Improve presentation]Implement a program description of general content on lines 1-6 in file Seven_Segment.c and Seven_Segment.h  //Implemented in commit d41bcdc
+2. [Improve presentation]Remove lines 21-23 in file Seven_Segment.c  //Implemented in commit d41bcdc
+3. [Open point]Remove unnesecesary includes from header file  //Implemented in commit d41bcdc
 4. [Functional improvement]Prior to integration, remove initialization calls and includes from the modules that communicate with the Segment display
 
 
