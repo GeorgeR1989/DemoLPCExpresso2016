@@ -1,0 +1,25 @@
+Object name: Test specifications for joystick module testing
+
+
+
+/**************************************************************************************************************************************************************************************/
+
+Description: The module is going to be tested with the PCA9532, 16-bit I2C-port expander, of the LPCXpresso Base Board.The following leds are going to be used: LED5, LED6, LED7, LED8.
+	     To test the module, all of the files from 	test_res should be uploaded on the board, and joystickPosition_test.c, which contaians the main function, should be run.
+	     The joystickPosition.c file should return a number,from 1-4, each corresponding to a position of the joystick, which is going to be used in joystickPosition_test.c to
+             light up one of the leds, as per the instructions.	
+
+
+/**************************************************************************************************************************************************************************************/
+
+Instructions: When the joystick is pressed up LED5 should light up.
+
+              When the joystick is pressed right LED6 should light up.
+
+              When the joystick is pressed down LED7 should light up.
+ 
+              When the joystick is pressed left LED8 should light up.
+
+
+
+

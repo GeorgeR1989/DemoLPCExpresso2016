@@ -1,0 +1,21 @@
+Object name:Design file for JOYSTICK module
+
+joystickPosition_d.txt / Commit ID:  57bf987
+
+
+Participants:
+Rosian Rad
+Bradescu Tudor (Moderator)
+Florica Vlad
+
+Findings:
+1. [Improve presentation] Module name at the beginning of the document [Implemented in commit number  471dd9a]
+2. [Improve presentation] Spelling mistake at line 1    [Implemented in commit number  471dd9a]              
+3. [Improve presentation] Add a list of relevant functions contained in joystick_init()  [Implemented in commit number  471dd9a]
+
+QA check: OK. Review closed
+
+Types of findings:
+[Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
+[Improve presentation] = Used in case aditional information must be used. The code works as it is, but it's harder to understand
+[Open point] = Used for questions unaswered during the review process
