@@ -1,0 +1,19 @@
+Object name: Test report for OLED module testing
+
+
+/******************************************************
+
+Module name: display.c
+
+Commit: d1d79f1
+
+Test date: 8/8/2016
+
+Test spec: display_test_spec.txt
+
+Commit: ee5d59f
+
+******************************************************/
+
+
+Test result: Test passed
