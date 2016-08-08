@@ -1,0 +1,19 @@
+Object name: Test specifications for joystick module testing
+
+joystickPosition_test_spec.txt / Commit ID: f684035
+
+
+Participants:
+Rosian Rad
+George Robu
+Brumar Florin (Moderator)
+
+
+Findings:
+No remarks found.
+
+
+Types of findings:
+[Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
+[Improve presentation] = Used in case aditional information must be used. The code works as it is, but it's harder to understand
+[Open point] = Used for questions unaswered during the review process
