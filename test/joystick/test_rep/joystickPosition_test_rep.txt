@@ -1,7 +1,7 @@
 Object name: Test report for joystick module testing
 
 
-/*******************************************************
+/******************************************************
 
 Module name: joystickPosition.c
 
@@ -13,7 +13,7 @@ Test spec: joystickPosition_test_spec.txt
 
 Commit: f684035 
 
-*******************************************************/
+******************************************************/
 
 
 Test result: Test passed
