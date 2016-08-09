@@ -1,18 +1,10 @@
-/*
- * buzzer.c
- *
- *  Created on: Aug 2, 2016
- *      Author: ioan.bobar
- */
+/*Bobar Ioan
+File name: buzzer.c
+Date:8/9/2016
+Description: Buzzer resource file
+*/
 
-
-#include "mcu_regs.h"
-#include "type.h"
-#include "stdio.h"
-#include "timer32.h"
-#include "gpio.h"
 #include "buzzer.h"
-
 
 volatile uint32_t timer32_0_counter = 0;
 
@@ -34,7 +26,7 @@ void TIMER32_0_IRQHandler(void)
   return;
 }
 /*****************************************************************************
- * ** Function name: delayMS **
+ * ** Function name: BUZZER_u16DelayInMs **
  * ** Descriptions: Start the timer delay in milliseconds until elapsed
  * ** 32-bit timer #0 is used **
  * ** Parameters: Delay value in millisecond **
@@ -59,9 +51,9 @@ void delayMS(uint16_t BUZZER_u16DelayInMs)
 **
 ** Descriptions: Initialize 32-bit timer #0 for PWM generation
 **
-** Parameters: noteInUs: Period time (in microseconds) for tone
-** 			   durationMs: Length of tone (in milliseconds)
-** 			   volume:the duty cycle of the PWM
+** Parameters: BUZZER_u16Note: Period time (in microseconds) for tone
+** 			   BUZZER_u16DurationMs: Length of tone (in milliseconds)
+** 			   BUZZER_u16Volume:the duty cycle of the PWM
 ** Returned value: None
 **
 *******************************************************************************/
@@ -70,8 +62,10 @@ void playNote(uint16_t BUZZER_u16Note, uint16_t BUZZER_u16DurationMs,uint16_t BU
     uint16_t BUZZER_u16TimeActive = 0;
 
     if (BUZZER_u16Note > 0) {
+// In the while loop buzzer functionality is controlled by frequency and volume.
+// The volume control is depending to how long time the duty cycle is on high state or low state.
 
-        while (BUZZER_u16TimeActive < (BUZZER_u16DurationMs*1000)) {
+    	while (BUZZER_u16TimeActive < (BUZZER_u16DurationMs*1000)) {
             P1_2_HIGH();
             delayMS(0);
 
