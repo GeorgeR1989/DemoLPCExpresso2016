@@ -17,6 +17,7 @@ Findings:
 4.[Improve presentation] Update function description in buzzer.c (lines 62-64 and 37) /Done in commit id 63a4475
 5.[Improve presentation] Comment the while loop from function playNote in buzzer.c (lines 74-82).Add details regarding the duty cycle usage /Done in commit id 63a4475
 
+QA check: OK. Review closed
 
 Types of findings:
 [Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
