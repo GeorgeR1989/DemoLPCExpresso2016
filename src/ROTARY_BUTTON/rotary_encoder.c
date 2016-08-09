@@ -1,10 +1,12 @@
 /*
- * rotary_encoder.c
- *
- *  Created on: Aug 3, 2016
- *      Author: dorin.deac
- */
-
+===============================================================================
+ Name        : rotary_encoder.c
+ Author      : Dorin-Stefan Deac
+ Version     : 1.0
+ Date        : 8/3/2016
+ Description : ROTARY_ENCODER module implementation
+===============================================================================
+*/
 #include "rotary_encoder.h"
 
 /*****************************************************************************
@@ -19,23 +21,33 @@
 **
 *****************************************************************************/
 uint8_t rotary_encoder(void){
-	uint8_t state = 0;
-	static uint8_t ch = MIN_VALUE;
+	static uint8_t ROT_EN__u8rotPos = MIN_VALUE;
 
-	state = rotary_read();
+	switch(rotary_read())
+	{
+		case ROTARY_WAIT :
+			break;
+		case ROTARY_RIGHT :
+			ROT_EN__u8rotPos++;
+			break;
+		case ROTARY_LEFT :
+			ROT_EN__u8rotPos--;
+			break;
+		default :
+			/*Intended fallthrough*/
+		  ;
+	}
+#ifdef OVERFLOW
+	if (OVERFLOW == ROT_EN__u8rotPos)
+		ROT_EN__u8rotPos = MAX_VALUE;
+#endif
+#ifndef OVERFLOW
+	if (MIN_VALUE > ROT_EN__u8rotPos)
+			ROT_EN__u8rotPos = MAX_VALUE;
+#endif
+	else if (MAX_VALUE < ROT_EN__u8rotPos)
+		ROT_EN__u8rotPos = MIN_VALUE;
 
-	if (ROTARY_WAIT != state) {
-		if (ROTARY_RIGHT == state) {
-	    ch++;
-	}
-	else {
-	    ch--;
-	}
-	if (MAX_VALUE < ch)
-	    ch = MIN_VALUE;
-	else if (MIN_VALUE > ch)
-	    ch = MAX_VALUE;
-	}
-	return ch;
+	return ROT_EN__u8rotPos;
 }
 
