@@ -15,3 +15,4 @@ Findings:
 4.[Functional improvement] Change if case in switch case in file rotary_encoder.c (line 27-33)
 5.[Functional improvement] Remove variable state in file rotary_encoder.c (line 22) and use function rotary_read() in the switch mention on the finding #4
 6.[Functional improvement] Prior to integration, remove initialization calls and includes from the modules that communicate with the ROTARY ENCODER
+7.[Functional improvement] Add a "break" command in the default section of the switch, in order to avoid possible errors. File rotary_encoder.c, line 37, commit ID c84f982.
