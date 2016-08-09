@@ -1,5 +1,19 @@
+/*Bobar Ioan
+File name: buzzer.h
+Date:8/9/2016
+Description: Buzzer header file
+*/
 
+
+#include "mcu_regs.h"
+#include "type.h"
+#include "stdio.h"
+#include "timer32.h"
+#include "gpio.h"
+
+//High state of the duty cycle
 #define P1_2_HIGH() (LPC_GPIO1->DATA |= (0x1<<2))
+//Low state of the duty cycle
 #define P1_2_LOW()  (LPC_GPIO1->DATA &= ~(0x1<<2))
 
 //Frequencies of notes
