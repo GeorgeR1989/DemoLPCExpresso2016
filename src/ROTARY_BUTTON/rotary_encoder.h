@@ -20,7 +20,7 @@
 /* MIN_VALUE and MAX_VALUE represents the limits of the set which will be returned */
 #define MIN_VALUE (0)
 #define MAX_VALUE (3)
-/*Use OVERFLOW when the includes 0 */
+/*Use OVERFLOW when the set includes 0 */
 #define OVERFLOW  (255)
 
 uint8_t rotary_encoder(void); /* Return position of rotary encoder module */
