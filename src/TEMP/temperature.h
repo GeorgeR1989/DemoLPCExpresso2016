@@ -1,9 +1,8 @@
-/*
- * temperature.h
- *
- *  Created on: Aug 3, 2016
- *      Author: florin.brumar
- */
+/*Brumar Florin - Ilie
+File name: temperature.h
+Date:8/5/2016
+Description: temperature.c header file
+*/
 
 #ifndef TEMPERATURE_H_
 #define TEMPERATURE_H_
@@ -19,7 +18,6 @@
 #include "stdbool.h"
 #include "timer32.h"
 
-bool read_button_status(void);
-uint32_t temp_conversion (bool change_unit);
+uint32_t temp_conversion (bool change_unit);  // make a conversion from Celsius ti Fahreinheit or Fahreinheit to Celsius
 
 #endif /* TEMPERATURE_H_ */
