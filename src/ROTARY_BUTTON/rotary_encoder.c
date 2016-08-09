@@ -35,7 +35,7 @@ uint8_t rotary_encoder(void){
 			break;
 		default :
 			/*Intended fallthrough*/
-		  ;
+			break;
 	}
 #ifdef OVERFLOW
 	if (OVERFLOW == ROT_EN__u8rotPos)
