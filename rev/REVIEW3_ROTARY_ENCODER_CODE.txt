@@ -9,6 +9,7 @@ Rosian Rad (Moderator)
 George Robu
 
 Findings:
+<<<<<<< HEAD
 1.[Improve presentation] Add description of general content for files rotary_encoder.c and rotary_encoder.h
 2.[Improve presentation] Comment the use of MIN_VALUE and MAX_VALUE from rotary_encoder.h (lines 16-17)
 3.[Functional improvement] Rename variable ch from rotary_encoder.c (line 23) with a more relevant meaning using naming convention
@@ -16,3 +17,11 @@ Findings:
 5.[Functional improvement] Remove variable state in file rotary_encoder.c (line 22) and use function rotary_read() in the switch mention on the finding #4
 6.[Functional improvement] Prior to integration, remove initialization calls and includes from the modules that communicate with the ROTARY ENCODER
 7.[Functional improvement] Add a "break" command in the default section of the switch, in order to avoid possible errors. File rotary_encoder.c, line 37, commit ID c84f982.
+=======
+1.[Improve presentation] Add description of general content for files rotary_encoder.c and rotary_encoder.h					Implemented on 6e312ec commit number.
+2.[Improve presentation] Comment the use of MIN_VALUE and MAX_VALUE from rotary_encoder.h (lines 16-17)						Implemented on 6e312ec commit number.
+3.[Functional improvement] Rename variable ch from rotary_encoder.c (line 23) with a more relevant meaning using naming convention 		Implemented on 6e312ec commit number.
+4.[Functional improvement] Change if case in switch case in file rotary_encoder.c (line 27-33)							Implemented on 6e312ec commit number.
+5.[Functional improvement] Remove variable state in file rotary_encoder.c (line 22) and use function rotary_read() in the switch mention on the finding #4 Implemented on 6e312ec commit number.
+6.[Functional improvement] Prior to integration, remove initialization calls and includes from the modules that communicate with the ROTARY ENCODER Implemented on 6e312ec commit number.
+>>>>>>> bef7d4aa647b73b8fc68b49938e5b97dc2df1711
