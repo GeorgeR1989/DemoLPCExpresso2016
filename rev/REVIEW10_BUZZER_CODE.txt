@@ -11,11 +11,11 @@ Rosian Rad (Moderator)
 
 
 Findings:
-1.[Functional improvement] Add all the libraries to the header file (buzzer.h)
-2.[Improve presentation] Add description for both files
-3.[Improve presentation] Comments for P1_2_HIGH() and P1_2_LOW() are missing.Please add description
-4.[Improve presentation] Update function description in buzzer.c (lines 62-64 and 37)
-5.[Improve presentation] Comment the while loop from function playNote in buzzer.c (lines 74-82).Add details regarding the duty cycle usage
+1.[Functional improvement] Add all the libraries to the header file (buzzer.h) /Done in commit id 63a4475
+2.[Improve presentation] Add description for both files/Done in /Done in commit id 63a4475
+3.[Improve presentation] Comments for P1_2_HIGH() and P1_2_LOW() are missing.Please add description /Done in commit id 63a4475
+4.[Improve presentation] Update function description in buzzer.c (lines 62-64 and 37) /Done in commit id 63a4475
+5.[Improve presentation] Comment the while loop from function playNote in buzzer.c (lines 74-82).Add details regarding the duty cycle usage /Done in commit id 63a4475
 
 
 Types of findings:
