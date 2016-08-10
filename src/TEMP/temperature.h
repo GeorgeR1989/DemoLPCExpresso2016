@@ -1,7 +1,7 @@
 /*Brumar Florin - Ilie
 File name: temperature.h
 Date:8/5/2016
-Description: temperature.c header file
+Description:  temperature module header file
 */
 
 #ifndef TEMPERATURE_H_
