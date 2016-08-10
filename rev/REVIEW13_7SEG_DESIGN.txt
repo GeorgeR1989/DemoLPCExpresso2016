@@ -1,0 +1,17 @@
+Object name: Design of 7SEG module
+
+Seven_Segment_d.txt / Commit ID: 3ec2296
+
+
+Participants:
+Vlad Florica
+George Robu (Moderator)
+
+
+Findings:
+No remarks found. Review closed.
+
+Types of findings:
+[Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
+[Improve presentation] = Used in case aditional information must be used. The code works as it is, but it's harder to understand
+[Open point] = Used for questions unaswered during the review process
