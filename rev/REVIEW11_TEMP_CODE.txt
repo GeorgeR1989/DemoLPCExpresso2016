@@ -1,0 +1,21 @@
+Object name: Source code of TEMP module:
+
+temperature.c / Commit ID: 3b0fb8f
+temperature.h / Commit ID: 3b0fb8f
+
+Participants:
+Florin Brumar	
+Rosian Rad	
+Vlad Florica (Moderator)
+
+
+Findings:
+1. [Improve presentation]  - Add author name in file temperature.c (line 1)
+2. [Improve presentation]  - Remove empty spaces and unnecessary comment lines in file temperature.c (lines 7-20)
+3. [Improve presentation]  - Add relevant comments to every cases from switch-case function in file temperatur.c (lines 33 and 54) 
+4. [Functional improvment] - Encapsulate all the commented lines between /*....*/ (each line) in file temerature.c (lines  18-19, 39-40)
+
+Types of findings:
+[Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
+[Improve presentation] = Used in case aditional information must be used. The code works as it is, but it's harder to understand
+[Open point] = Used for questions unaswered during the review process
