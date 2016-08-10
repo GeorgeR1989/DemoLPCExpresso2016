@@ -1,0 +1,23 @@
+Object name: Push button module source code 
+
+push_button.c / Commit ID: 36785d7
+push_button.h / Commit ID: 36785d7
+
+Participants:
+George Robu	
+Florin Brumar 
+Vlad Florica (Moderator)
+
+Findings:
+1. [Improve presentation] - Change "Description: push_button.c header file" to "Description: push button module header file" in file push_button.h line 4
+2. [Improve presentation] - Correct description of the file push_button.c to "Description: push button module implementation file" (line 4)
+3. [Functional improvement] - Encapsulate all the commented lines between /*....*/ (each line) in all files
+4. [Functional improvement] - In push_button.h, add a #define ADC_CHANNEL 5 /*ADC Channel that will be used. Change the configuration here if needed*/
+5. [Functional improvement] - Replace the if instruction from push_button.c file (line 26) with a switch statement and use as switch argument the ADCRead(ADC_CHANNEL) defined at the previous finding
+6. [Functional improvement] - Add a bool variable for function read_button_status() and use it to collect the button status. At the end of the function return this bool variable.
+
+
+Types of findings:
+[Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
+[Improve presentation] = Used in case aditional information must be used. The code works as it is, but it's harder to understand
+[Open point] = Used for questions unaswered during the review process
