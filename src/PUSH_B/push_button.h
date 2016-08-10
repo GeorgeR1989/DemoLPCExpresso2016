@@ -1,7 +1,7 @@
 /*Brumar Florin - Ilie
 File name: push_button.h
 Date:8/5/2016
-Description: push_button.c header file
+Description:  push button module header file
  */
 
 #ifndef PUSH_BUTTON_H_
@@ -14,6 +14,8 @@ Description: push_button.c header file
 #include "gpio.h"
 #include "stdbool.h"
 #include "adc.h"
+
+#define ADC_CHANNEL (5)  /* we will use channel 5 to read the button statusb */
 
 bool read_button_status(); // read the status of the push buttons
 
