@@ -9,12 +9,12 @@ Florin Brumar
 Vlad Florica (Moderator)
 
 Findings:
-1. [Improve presentation] - Change "Description: push_button.c header file" to "Description: push button module header file" in file push_button.h line 4
-2. [Improve presentation] - Correct description of the file push_button.c to "Description: push button module implementation file" (line 4)
-3. [Functional improvement] - Encapsulate all the commented lines between /*....*/ (each line) in all files
-4. [Functional improvement] - In push_button.h, add a #define ADC_CHANNEL 5 /*ADC Channel that will be used. Change the configuration here if needed*/
-5. [Functional improvement] - Replace the if instruction from push_button.c file (line 26) with a switch statement and use as switch argument the ADCRead(ADC_CHANNEL) defined at the previous finding
-6. [Functional improvement] - Add a bool variable for function read_button_status() and use it to collect the button status. At the end of the function return this bool variable.
+1. [Improve presentation] - Change "Description: push_button.c header file" to "Description: push button module header file" in file push_button.h line 4 (implemented in 3921312)
+2. [Improve presentation] - Correct description of the file push_button.c to "Description: push button module implementation file" (line 4)   (implemented in 3921312)
+3. [Functional improvement] - Encapsulate all the commented lines between /*....*/ (each line) in all files   (implemented in 3921312)
+4. [Functional improvement] - In push_button.h, add a #define ADC_CHANNEL 5 /*ADC Channel that will be used. Change the configuration here if needed*/   (implemented in 3921312)
+5. [Functional improvement] - Replace the if instruction from push_button.c file (line 26) with a switch statement and use as switch argument the ADCRead(ADC_CHANNEL) defined at the previous finding (implemented in 3921312)
+6. [Functional improvement] - Add a bool variable for function read_button_status() and use it to collect the button status. At the end of the function return this bool variable.  (implemented in 3921312)
 
 
 Types of findings:
