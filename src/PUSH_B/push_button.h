@@ -17,6 +17,6 @@ Description:  push button module header file
 
 #define ADC_CHANNEL (5)  /* we will use channel 5 to read the button statusb */
 
-bool read_button_status(); // read the status of the push buttons
+uint32_t read_button_status(); // read the status of the push button
 
 #endif /* PUSH_BUTTON_H_ */
