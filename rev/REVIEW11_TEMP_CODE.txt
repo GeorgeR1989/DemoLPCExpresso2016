@@ -10,11 +10,11 @@ Vlad Florica (Moderator)
 
 
 Findings:
-1. [Improve presentation]  - Add author name in file temperature.c (line 1)
-2. [Improve presentation]  - Remove empty spaces and unnecessary comment lines in file temperature.c (lines 7-20)
-3. [Improve presentation]  - Add relevant comments to every cases from switch-case function in file temperatur.c (lines 33 and 54) 
-4. [Functional improvement]- Encapsulate all the commented lines between /*....*/ (each line) in file temerature.c (lines  18-19, 39-40)
-5. [Functional improvement]- Change the switch case to a if case in temperature.c,to avoid warning due to boolean value
+1. [Improve presentation]  - Add author name in file temperature.c (line 1)     (implemented in 7f795c6)
+2. [Improve presentation]  - Remove empty spaces and unnecessary comment lines in file temperature.c (lines 7-20)   (implemented in 7f795c6)
+3. [Improve presentation]  - Add relevant comments to every cases from switch-case function in file temperatur.c (lines 33 and 54) (implemented in 7f795c6)
+4. [Functional improvement]- Encapsulate all the commented lines between /*....*/ (each line) in file temerature.c (lines  18-19, 39-40)  (implemented in 7f795c6)
+5. [Functional improvement]- Change the switch case to a if case in temperature.c,to avoid warning due to boolean value  (implemented in 7f795c6)
 
 Types of findings:
 [Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
