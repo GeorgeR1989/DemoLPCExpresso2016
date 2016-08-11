@@ -16,6 +16,7 @@ Findings:
 5. [Functional improvement] - Replace the if instruction from push_button.c file (line 26) with a switch statement and use as switch argument the ADCRead(ADC_CHANNEL) defined at the previous finding (implemented in 3921312)
 6. [Functional improvement] - Add a bool variable for function read_button_status() and use it to collect the button status. At the end of the function return this bool variable.  (implemented in 3921312)
 
+QA check: OK. Review closed
 
 Types of findings:
 [Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
