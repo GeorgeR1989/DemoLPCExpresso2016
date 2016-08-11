@@ -23,7 +23,7 @@ volatile uint32_t previous_state ='C';
 
 /*..............................................................................................................*/
 
-uint32_t temp_conversion (bool change_unit)
+uint32_t temp_conversion (uint32_t change_unit)
 
 {
 
@@ -35,13 +35,13 @@ uint32_t temp_conversion (bool change_unit)
 	{
 		case  (1):
 		{
-/* if change_unit value is true, we have to change the temperature unit, if it was in Celsius degrees we will change it in Fahreinheit degrees */
+/* if change_unit value is 1(true), we have to change the temperature unit, if it was in Celsius degrees we will change it in Fahreinheit degrees */
 			if (previous_state == 'C')
 				 {
 				           t_unit = temp_read();
 				           t_unit = t_unit / 10;
-						   t_unit = (t_unit * 9 / 5 + 32 );        
-	 /*  Celsius to Fahreinheit transformation; 0 degrees Celsius is equal to 32 degrees Fahrenheit*/					                                               
+						   t_unit = (t_unit * 9 / 5 + 32 );
+	 /*  Celsius to Fahreinheit transformation; 0 degrees Celsius is equal to 32 degrees Fahrenheit*/
      /*  The temperature T in degrees Fahrenheit (°F) is equal to the temperature T in degrees Celsius (°C) times 9/5 plus 32:  */
 				           previous_state = 'F';
 				           break;
@@ -59,7 +59,7 @@ uint32_t temp_conversion (bool change_unit)
 		}
 		case (0):
 		{
-/* if change_unit value is false we no need to change the previous temperature unit */
+/* if change_unit value is 0(false) we no need to change the previous temperature unit */
 			if (previous_state == 'C')
 				{
 						   t_unit = temp_read();
@@ -83,5 +83,3 @@ uint32_t temp_conversion (bool change_unit)
 }
 
 /*.................................................................................................*/
-
-
