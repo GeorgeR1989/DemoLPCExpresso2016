@@ -125,3 +125,22 @@ void temp_display(void)
         /* delay */
         delay32Ms(0, 200);
     }
+    void display_temperature_circle(void)
+{
+	oled_circle(31, 26, 3, OLED_COLOR_BLACK);
+}
+
+void display_celsius(void)
+{
+	oled_fillRect(36,28,50,30,OLED_COLOR_BLACK);
+	oled_fillRect(36,31,39,54,OLED_COLOR_BLACK);
+	oled_fillRect(48,31,50,33,OLED_COLOR_BLACK);
+	oled_fillRect(48,49,50,51,OLED_COLOR_BLACK);
+	oled_fillRect(40,52,50,54,OLED_COLOR_BLACK);
+}
+void display_Fahrenheit(void)
+{
+	oled_fillRect(36,28,50,30,OLED_COLOR_BLACK);
+	oled_fillRect(36,31,39,54,OLED_COLOR_BLACK);
+	oled_fillRect(40,37,45,40,OLED_COLOR_BLACK);
+}
