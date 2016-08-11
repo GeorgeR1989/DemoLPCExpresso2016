@@ -1,0 +1,20 @@
+** Author: Brumar Florin - Ilie
+** File name: push_button_d.txt
+** Date:8/10/2016
+** Description: Push button module design file. 
+
+
+This module is used to check if the push button was pressed or not.
+
+This unit it`s going to be used together with temperature module.
+
+Functions:
+/******************************************************************************
+** Function name: bool read_button_status()
+**
+** Descriptions:  read the value from the adc channel , where the push button is connected
+**                and return 1 or 0 in button_pressed variabile if the button is pressed or not
+**               
+** Parameters:	  none
+**  
+******************************************************************************/
