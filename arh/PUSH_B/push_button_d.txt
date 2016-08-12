@@ -10,7 +10,7 @@ This unit it`s going to be used together with temperature module.
 
 Functions:
 /******************************************************************************
-** Function name: bool read_button_status()
+** Function name: uint32_t read_button_status()
 **
 ** Descriptions:  read the value from the adc channel , where the push button is connected
 **                and return 1 or 0 in button_pressed variabile if the button is pressed or not
