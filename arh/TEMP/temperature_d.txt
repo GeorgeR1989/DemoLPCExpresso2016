@@ -9,7 +9,7 @@ The temperature will be sent in Celsius degrees or in Fahrenheit degrees,it depe
 unit changing or not.
 
 
-This unit it`s going to be used together with push_button module and display module.
+This unit is going to be used together with push_button module and display module.
 
 Functions:
 /******************************************************************************
