@@ -1,0 +1,18 @@
+Object name: Design of TEMPERATURE module
+
+push_button_d.txt / Commit ID:  b5673fb
+
+
+Participants:
+Brumar Florin
+Bradescu Tudor (Moderator)
+Florica Vlad
+
+Findings:
+1. [Improve presentation] Line 8 correct the spelling mistake in "it's going"
+
+
+Types of findings:
+[Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
+[Improve presentation] = Used in case aditional information must be used. The code works as it is, but it's harder to understand
+[Open point] = Used for questions unaswered during the review process
