@@ -6,7 +6,7 @@
 
 This module is used to check if the push button was pressed or not.
 
-This unit it`s going to be used together with temperature module.
+This unit is going to be used together with temperature module.
 
 Functions:
 /******************************************************************************
