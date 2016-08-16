@@ -137,7 +137,7 @@ void setTimer16(void)
 void init_rgbLED(void)
 {
     rgb_init();                   /* Initialize pins as output */
-    setTimer16();                 /* Set timer for controlling the intensity of the leds with a PWM signal*/
+    setTimer16();                 /* Set timer for controlling the intensity of the LED with a PWM signal*/
 
     GPIOSetValue( PORT1, 9, 1 );  /* RED    - HIGH */
     GPIOSetValue( PORT1, 10, 1 ); /* GREEN  - HIGH */
@@ -186,7 +186,7 @@ void TIMER16_0_IRQHandler(void)
 /*****************************************************************************
 ** Function name:		setColor_rgb
 **
-** Descriptions:		Sets the new comparation values ( intensity of LED) for timer registers
+** Descriptions:		Sets the new comparison values ( intensity of LED) for timer registers
 **
 ** parameters:			uint8_t red (intensity of red LED)
 ** 						uint8_t green (intensity of green LED)
@@ -209,7 +209,7 @@ void setColor_rgb(uint8_t red, uint8_t green, uint8_t blue)
 /*****************************************************************************
 ** Function name:		rgbRainbow
 **
-** Descriptions:		Demo functionality of RGB modula
+** Descriptions:		Demo functionality of RGB module
 **
 ** parameters:			None
 **
@@ -236,4 +236,14 @@ void rgbRainbow(void)
 	    delay32Ms(1,200);                /* Delay 200 ms */
 	}
 
+}
+
+void rgb_stop(void)
+{
+	Chip_TIMER_Disable(LPC_TMR16B0);
+
+
+	GPIOSetValue( PORT1, 9, 0 );  /* RED    - LOW */
+	GPIOSetValue( PORT1, 10, 0 ); /* GREEN  - LOW */
+	GPIOSetValue( PORT1, 2, 0 );  /* BLUE   - LOW */
 }

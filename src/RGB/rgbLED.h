@@ -45,8 +45,6 @@
 #define TIMER_INT_ON_MATCH(n)   (_BIT(((n) * 3)))
 /** Bit location for reset on MRx match, n = 0 to 3 */
 #define TIMER_RESET_ON_MATCH(n) (_BIT((((n) * 3) + 1)))
-/** Bit location for stop on MRx match, n = 0 to 3 */
-#define TIMER_STOP_ON_MATCH(n)  (_BIT((((n) * 3) + 2)))
 
 
 #define DEFAULT_INTENSITY (255)
@@ -55,6 +53,7 @@
 void init_rgbLED(void); /* Set pins as output */
 void setTimer16(void);  /* Set timer for PWM functionality */
 void setColor_rgb(uint8_t, uint8_t, uint8_t); /* set a new color from the combination of red, green blue */
-void rgbRainbow(void);  /* Examplying the functionality */
+void rgbRainbow(void);  /*  Special functionality for module presentation */
+void rgb_stop(void) /* Stop the RGB module */
 
 #endif /* RGBLEDS_H_ */
