@@ -15,6 +15,8 @@
 #include "joystick.h"
 #include "mcu_regs.h"
 #include "timer32.h"
+#include "timer16.h"
+#include "rgb.h"
 #include "type.h"
 #include "uart.h"
 #include "i2c.h"
@@ -40,6 +42,37 @@
 
 
 
+#define STATIC static
+#define INLINE inline
+
+/* Set bit macro */
+#define _BIT(n) (1 << (n))
+
+/** Timer/counter enable bit */
+#define TIMER_ENABLE            ((uint32_t) (1 << 0))
+/** Timer/counter reset bit */
+#define TIMER_RESET             ((uint32_t) (1 << 1))
+
+
+/** Macro to clear interrupt pending */
+#define TIMER_IR_CLR(n)         _BIT(n)
+
+/** Macro for getting a timer match interrupt bit */
+#define TIMER_MATCH_INT(n)      (_BIT((n) & 0x0F))
+/** Macro for getting a capture event interrupt bit */
+#define TIMER_CAP_INT(n)        (_BIT((((n) & 0x0F) + 4)))
+
+
+/** Bit location for interrupt on MRx match, n = 0 to 3 */
+#define TIMER_INT_ON_MATCH(n)   (_BIT(((n) * 3)))
+/** Bit location for reset on MRx match, n = 0 to 3 */
+#define TIMER_RESET_ON_MATCH(n) (_BIT((((n) * 3) + 1)))
+
+
+#define DEFAULT_INTENSITY (255)
+#define RGB_TIMING (255)
+
+
 /*Main functions*/
 void DemoLPCExpresso2016_init(void);
 void ledSet(uint8_t value);
@@ -50,12 +83,17 @@ void playNote(uint16_t, uint16_t, uint16_t);
 
 char joystickPosition(void);
 uint8_t rotary_encoder(void);
-uint32_t temp_conversion (bool change_unit);
+uint32_t temp_conversion (uint32_t change_unit);
 
 bool read_button_status();
 
 void DemoLPCExpresso2016_init();
 
+void init_rgbLED(void); /* Set pins as output */
+void setTimer16(void);  /* Set timer for PWM functionality */
+void setColor_rgb(uint8_t, uint8_t, uint8_t); /* set a new color from the combination of red, green blue */
+void rgbRainbow(void);  /*  Special functionality for module presentation */
+void rgb_stop(void); /* Stop the RGB module */
 
 /*Variables*/
 static uint16_t notes[] = {

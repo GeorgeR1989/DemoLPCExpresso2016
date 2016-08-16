@@ -70,7 +70,7 @@ void playNote(uint16_t BUZZER_u16Note, uint16_t BUZZER_u16DurationMs,uint16_t BU
             delayMS(0);
 
             P1_2_LOW();
-            delayMs(BUZZER_u16Volume);
+            delayMs(0,BUZZER_u16Volume);
 
             BUZZER_u16TimeActive += BUZZER_u16Note;
         }

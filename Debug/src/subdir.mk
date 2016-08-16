@@ -12,6 +12,7 @@ C_SRCS += \
 ../src/display.c \
 ../src/joystickPosition.c \
 ../src/push_button.c \
+../src/rgbLED.c \
 ../src/rotary_encoder.c \
 ../src/temperature.c 
 
@@ -24,6 +25,7 @@ OBJS += \
 ./src/display.o \
 ./src/joystickPosition.o \
 ./src/push_button.o \
+./src/rgbLED.o \
 ./src/rotary_encoder.o \
 ./src/temperature.o 
 
@@ -36,6 +38,7 @@ C_DEPS += \
 ./src/display.d \
 ./src/joystickPosition.d \
 ./src/push_button.d \
+./src/rgbLED.d \
 ./src/rotary_encoder.d \
 ./src/temperature.d 
 
@@ -44,7 +47,7 @@ C_DEPS += \
 src/%.o: ../src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU C Compiler'
-	arm-none-eabi-gcc -D__USE_CMSIS=CMSISv1p30_LPC11xx -D_LPCXpresso_ -DDEBUG -D__CODE_RED -D__REDLIB__ -I"D:\work\tmp\src\Lib_CMSISv1p30_LPC11xx\inc" -I"D:\work\tmp\src\Lib_FatFs_SD\inc" -I"D:\work\tmp\src\Lib_EaBaseBoard\inc" -I"D:\work\tmp\src\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	arm-none-eabi-gcc -D__USE_CMSIS=CMSISv1p30_LPC11xx -D_LPCXpresso_ -DDEBUG -D__CODE_RED -D__REDLIB__ -I"D:\GitHubRepository\work\workspace\Lib_CMSISv1p30_LPC11xx\inc" -I"D:\GitHubRepository\work\workspace\Lib_FatFs_SD\inc" -I"D:\GitHubRepository\work\workspace\Lib_EaBaseBoard\inc" -I"D:\GitHubRepository\work\workspace\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m0 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

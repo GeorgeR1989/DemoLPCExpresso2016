@@ -24,6 +24,10 @@ void DemoLPCExpresso2016_init()
 	ADCInit( ADC_CLK );
 
 	oled_init();
+	//init_display();
+
+	rgb_init();
+	rgb_stop();
 
 
 	/*rotary encoder initialization*/

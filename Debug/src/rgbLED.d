@@ -1,5 +1,4 @@
-src/display.o src/display.d: ../src/display.c \
- ../src/DemoLPCExpresso2016.h \
+src/rgbLED.o src/rgbLED.d: ../src/rgbLED.c ../src/DemoLPCExpresso2016.h \
  D:\GitHubRepository\work\workspace\Lib_MCU\inc/type.h \
  D:\GitHubRepository\work\workspace\Lib_MCU\inc/gpio.h \
  D:\GitHubRepository\work\workspace\Lib_EaBaseBoard\inc/joystick.h \

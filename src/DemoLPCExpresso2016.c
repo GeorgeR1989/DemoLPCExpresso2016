@@ -18,21 +18,24 @@ int main()
 		case 0:
 			/*Idle state*/
 			ledSet(0);
-			oled_clearScreen(OLED_COLOR_BLACK);
+			//oled_clearScreen(OLED_COLOR_BLACK);
 			break;
 		case 1:
 			/*Temperature */
-			oled_clearScreen(OLED_COLOR_WHITE); /*Remove after adding oled module*/
+			//oled_clearScreen(OLED_COLOR_WHITE); /*Remove after adding oled module*/
+			/*temp_display();*/
 			ledSet(1);
+			rgb_stop();
 			break;
 		case 2:
 			/*RGB*/
-			oled_clearScreen(OLED_COLOR_BLACK);
+			rgbRainbow();
 			ledSet(2);
 			break;
 		case 3:
 			/*Buzzer*/
-			oled_clearScreen(OLED_COLOR_WHITE);
+			rgb_stop();
+			//oled_clearScreen(OLED_COLOR_WHITE);
 			ledSet(3);
 			break;
 		default:

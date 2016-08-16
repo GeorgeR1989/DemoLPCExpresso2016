@@ -110,5 +110,5 @@ void temp_display(void)
 
 
         /* delay */
-        delay32Ms(0, 200);
+        //delay32Ms(0, 200);
     }

@@ -5,7 +5,7 @@
  * Generated linker script file for LPC1114/301
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.23
- * LPCXpresso v8.1.4 [Build 606] [2016-03-14]  on Aug 11, 2016 5:06:37 PM
+ * LPCXpresso v8.1.4 [Build 606] [2016-03-14]  on Aug 16, 2016 6:55:39 PM
  */
 
 INCLUDE "lpcxpresso1114_blinky_Debug_library.ld"
