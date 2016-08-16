@@ -1,0 +1,17 @@
+Object name: Test specifications for TEMP module testing
+
+/************************************************************************************************************************************************************/
+
+Description: This module is going to be tested by converting the temperature range from Fahreinheit degrees to Celsius degrees and viceversa every 3 seconds, 
+and displaying it on the OLED.
+
+
+/************************************************************************************************************************************************************/
+
+Instructions: To test the module, all of the files from TEMP/test_res should be uploaded on the board, and  temp_main.c, which contaians the main function, 
+should be run.
+
+The TEMP module will display the temperature in Fahreinheit and Celsius with a 3000ms delay.
+		
+
+
