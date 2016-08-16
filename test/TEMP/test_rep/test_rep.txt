@@ -1,0 +1,19 @@
+Object name: Test report for TEMP module testing
+
+
+/******************************************************
+
+Module name: temperature.c
+
+Commit: 7f795c6
+
+Test date: 8/16/2016
+
+Test spec: temperature_test_spec.txt
+
+Commit: b7be063  
+
+******************************************************/
+
+
+Test result: Test passed
