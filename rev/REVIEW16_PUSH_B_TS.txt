@@ -1,0 +1,17 @@
+Object name: Test specifications for push button module
+
+push_b_test_spec.txt / Commit ID: e765a8b
+
+
+Participants:
+George Robu (Moderator)
+Brumar Florin 
+
+
+Findings:
+No remarks found.
+
+Types of findings:
+[Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
+[Improve presentation] = Used in case aditional information must be used. The code works as it is, but it's harder to understand
+[Open point] = Used for questions unaswered during the review process
