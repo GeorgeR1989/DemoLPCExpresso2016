@@ -1,0 +1,17 @@
+Object name: Test specifications for PUSH_B module testing
+
+/************************************************************************************************************************************************************/
+
+Description: This module is going to be tested by pressing the push button, whenever you want and displaying on the OLED the message "Not pressed" if the push
+button is pressed and the message "Pressed" when the buuton is pressed by the user.
+
+
+/************************************************************************************************************************************************************/
+
+Instructions: To test the module, all of the files from PUSH_B/test_res should be uploaded on the board, and  push_b_main.c, which contaians the main function, 
+should be run.
+
+
+		
+
+
