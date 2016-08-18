@@ -6,11 +6,12 @@
  ******************************************************************************/
 
 #include "DemoLPCExpresso2016.h"
-
+int32_t t = 0;
 int main()
 {
 	DemoLPCExpresso2016_init();
 
+	t = temp_conversion (read_button_status());
 	while(1)
 	{
 		switch(rotary_encoder())
@@ -18,26 +19,28 @@ int main()
 		case 0:
 			/*Idle state*/
 			ledSet(0);
-			//oled_clearScreen(OLED_COLOR_BLACK);
 			break;
+
 		case 1:
-			/*Temperature */
-			//oled_clearScreen(OLED_COLOR_WHITE); /*Remove after adding oled module*/
-			/*temp_display();*/
+			/*RGB & SOUND*/
+			rgbRainbow();
 			ledSet(1);
 			rgb_stop();
 			break;
+
+
 		case 2:
-			/*RGB*/
-			rgbRainbow();
-			ledSet(2);
-			break;
+					/*Temperature*/
+					ledSet(2);
+					/*ADD OLED & TEMP SUPPORT*/
+					break;
+
 		case 3:
 			/*Buzzer*/
-			rgb_stop();
-			//oled_clearScreen(OLED_COLOR_WHITE);
+			/*ADD BUZZER SUPPORT*/
 			ledSet(3);
 			break;
+
 		default:
 			break;
 

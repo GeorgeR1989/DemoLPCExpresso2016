@@ -8,7 +8,7 @@ Description: OLED temperature display resource file
 
 static uint32_t msTicks = 0;
 static uint8_t buf[10];
-int32_t t = 0;
+
 
 static void intToString(int value, uint8_t* pBuf, uint32_t len, uint32_t base)  //converts to string an integer value
 
@@ -73,7 +73,18 @@ static uint32_t getTicks(void) //return the number of clock ticks
 void init_display (void)
 {
 
-	temp_init (&getTicks);
+	 GPIOInit();
+	    init_timer32(0, 10);
+
+	    UARTInit(115200);
+	    UARTSendString((uint8_t*)"OLED - Peripherals\r\n");
+
+	    I2CInit( (uint32_t)I2CMASTER, 0 );
+	    SSPInit();
+	    ADCInit( ADC_CLK );
+
+	     oled_init();
+	     temp_init (&getTicks);
     /* setup sys Tick. Elapsed time is e.g. needed by temperature sensor */
     SysTick_Config(SystemCoreClock / 1000);
     if ( !(SysTick->CTRL & (1<<SysTick_CTRL_CLKSOURCE_Msk)) )
@@ -96,11 +107,11 @@ void init_display (void)
 
     oled_putString(1,1,  (uint8_t*)"Temp   : ", OLED_COLOR_BLACK, OLED_COLOR_WHITE);
 }
-void temp_display(void)
+void temp_display(int32_t t)
 {
 
         /* Temperature */
-        t = temp_read();
+     //   t = temp_conversion (read_button_status());
 
         /* output values to OLED display */
 

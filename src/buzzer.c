@@ -6,8 +6,8 @@ Description: Buzzer resource file
 
 #include "DemoLPCExpresso2016.h"
 
-volatile uint32_t timer32_0_counter = 0;
-
+volatile uint32_t timer16_0_counter = 0;
+volatile uint32_t timer16_1_counter = 0;
 
 /******************************************************************************
 ** Function name:		TIMER32_0_IRQHandler
@@ -18,13 +18,7 @@ volatile uint32_t timer32_0_counter = 0;
 ** parameters:			None
 ** Returned value:		None
 **
-******************************************************************************/
-void TIMER32_0_IRQHandler(void)
-{
-  LPC_TMR32B0->IR = 1;			/* clear interrupt flag */
-  timer32_0_counter++;
-  return;
-}
+******************************************************************************
 /*****************************************************************************
  * ** Function name: BUZZER_u16DelayInMs **
  * ** Descriptions: Start the timer delay in milliseconds until elapsed
@@ -32,20 +26,6 @@ void TIMER32_0_IRQHandler(void)
  * ** Parameters: Delay value in millisecond **
  * ** Returned value: None **
  * *****************************************************************************/
-void delayMS(uint16_t BUZZER_u16DelayInMs)
-{
-	//setup timer #0 for delay
-	LPC_SYSCON->SYSAHBCLKCTRL |= (1<<9); /* Enable 32-bit timer #0 clock */
-	LPC_TMR32B0->TCR = 0x02; /* reset timer */
-	LPC_TMR32B0->PR = 0x00; /* set prescaler to zero */
-	//(SystemCoreClock/LPC_SYSCON->SYSAHBCLKDIV) = 48000000 => Timer clock is 48MHz
-	LPC_TMR32B0->MR0 = BUZZER_u16DelayInMs * ((SystemCoreClock/LPC_SYSCON->SYSAHBCLKDIV)/ 1000000);
-	LPC_TMR32B0->IR = 0xff; /* reset all interrupts (not needed) */
-	LPC_TMR32B0->MCR = 0x04; /* stop timer on match */
-	LPC_TMR32B0->TCR = 0x01; /* start timer */
-	/* wait until delay time has elapsed */
-	while (LPC_TMR32B0->TCR & 0x01);
-}
 /*****************************************************************************
 ** Function name: playNote
 **
@@ -57,31 +37,138 @@ void delayMS(uint16_t BUZZER_u16DelayInMs)
 ** Returned value: None
 **
 *******************************************************************************/
-void playNote(uint16_t BUZZER_u16Note, uint16_t BUZZER_u16DurationMs,uint16_t BUZZER_u16Volume) {
-
-    uint16_t BUZZER_u16TimeActive = 0;
-
-    if (BUZZER_u16Note > 0) {
-// In the while loop buzzer functionality is controlled by frequency and volume.
-// The volume control is depending to how long time the duty cycle is on high state or low state.
-
-    	while (BUZZER_u16TimeActive < (BUZZER_u16DurationMs*1000)) {
+/*
+static void playNote(uint32_t note, uint32_t durationMs) {
+    uint32_t t = 0;
+    if (note > 0) {
+        while (t < (durationMs*1000)) {
             P1_2_HIGH();
-            delayMS(0);
-
+            delay32Us(0, note / 2);
             P1_2_LOW();
-            delayMs(0,BUZZER_u16Volume);
-
-            BUZZER_u16TimeActive += BUZZER_u16Note;
+            delay32Us(0, note / 2);
+            t += note;
         }
-
     }
     else {
-        delay32Ms(0, BUZZER_u16DurationMs);
+        delay32Ms(0, durationMs);
     }
+}
+*/
+
+
+
+
+
+
+/*TIMER FUNCTIONS*/
+/*===============================================================================*/
+/**
+ * @brief	Determine if a match interrupt is pending
+ * @param	pTMR		: Pointer to timer IP register address
+ * @param	matchnum	: Match interrupt number to check
+ * @return	false if the interrupt is not pending, otherwise true
+ * @note	Determine if the match interrupt for the passed timer and match
+ * counter is pending.
+ */
+STATIC INLINE uint8_t Chip_TIMER_MatchPending(LPC_TMR_TypeDef *pTMR, int8_t matchnum)
+{
+	return (uint8_t) ((pTMR->IR & TIMER_MATCH_INT(matchnum)) != 0);
+}
+
+/**
+ * @brief	Clears a (pending) match interrupt
+ * @param	pTMR		: Pointer to timer IP register address
+ * @param	matchnum	: Match interrupt number to clear
+ * @return	Nothing
+ * @note	Clears a pending timer match interrupt.
+ */
+STATIC INLINE void Chip_TIMER_ClearMatch(LPC_TMR_TypeDef *pTMR, int8_t matchnum)
+{
+	pTMR->IR = TIMER_IR_CLR(matchnum);
 }
 
 
+/**
+ * @brief	Enables the timer (starts count)
+ * @param	pTMR	: Pointer to timer IP register address
+ * @return	Nothing
+ * @note	Enables the timer to start counting.
+ */
+STATIC INLINE void Chip_TIMER_Enable(LPC_TMR_TypeDef *pTMR)
+{
+	pTMR->TCR |= TIMER_ENABLE;
+}
+
+/**
+ * @brief	Disables the timer (stops count)
+ * @param	pTMR	: Pointer to timer IP register address
+ * @return	Nothing
+ * @note	Disables the timer to stop counting.
+ */
+STATIC INLINE void Chip_TIMER_Disable(LPC_TMR_TypeDef *pTMR)
+{
+	pTMR->TCR &= ~TIMER_ENABLE;
+}
+
+/**
+ * @brief	Resets the timer terminal and prescale counts to 0
+ * @return	Nothing
+ */
+/**
+ * @brief	Resets the timer terminal and prescale counts to 0
+ * @return	Nothing
+ */
+
+
+/*===============================================================================*/
+
+/*****************************************************************************
+** Function name:		setTimer16
+**
+** Descriptions:		Set TIMER for PWM functionality
+**
+** parameters:			None
+**
+** Returned value:		None
+**
+*****************************************************************************/
 
 
 
+
+/*****************************************************************************
+** Function name:		TIMER16_0_IRQHandler
+**
+** Descriptions:		Handles the interrupts from TIMER16B0 and modulates the PWM signals
+**
+** parameters:			None
+**
+** Returned value:		None
+**
+*****************************************************************************/
+
+
+void setNote(uint16_t note)
+{
+	Chip_TIMER_Disable(LPC_TMR16B0);
+
+	LPC_TMR16B0->MR0 = note;
+
+	Chip_TIMER_Enable(LPC_TMR16B0);
+}
+void setIntensity(uint8_t pwmValue)
+{
+	Chip_TIMER_Disable(LPC_TMR16B0);
+
+	LPC_TMR16B0->MR1 = LPC_TMR16B0->MR0 * pwmValue / 100;
+
+	Chip_TIMER_Enable(LPC_TMR16B0);
+}
+void startMusic()
+{
+	Chip_TIMER_Enable(LPC_TMR16B0);
+}
+void stopMusic()
+{
+	Chip_TIMER_Disable(LPC_TMR16B0);
+}

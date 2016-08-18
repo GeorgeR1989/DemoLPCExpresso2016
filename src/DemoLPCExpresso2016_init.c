@@ -7,6 +7,7 @@
 
 #include "DemoLPCExpresso2016.h"
 
+
 void DemoLPCExpresso2016_init()
 {
 	 /*joystick initialization*/
@@ -24,10 +25,10 @@ void DemoLPCExpresso2016_init()
 	ADCInit( ADC_CLK );
 
 	oled_init();
-	//init_display();
+	init_display();
+	init_buzzer();
 
 	rgb_init();
-	rgb_stop();
 
 
 	/*rotary encoder initialization*/
@@ -35,4 +36,5 @@ void DemoLPCExpresso2016_init()
 
 	/*seven segment display initialization*/
 	led7seg_init();
+
 }

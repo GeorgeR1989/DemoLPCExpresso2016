@@ -1,4 +1,5 @@
-/*****************************************************************************
+/*
+ /*****************************************************************************
  *  Rosian Rad
  *  File name: joystickPosition.c
  *  Date: 8/3/2016
@@ -12,6 +13,7 @@
 char joystickPosition()
 {
 	char sendjoystickPosition = 0;     //Variable used to store the number returned by the function
+	joystick_init();
 
 
 	switch(joystick_read())
@@ -34,7 +36,3 @@ char joystickPosition()
 
 	return sendjoystickPosition;
 }
-
-
-
-
