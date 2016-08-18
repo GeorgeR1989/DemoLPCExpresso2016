@@ -1,0 +1,24 @@
+Object name: Source code of module RGB: 
+
+rgbLED.c / Commit ID:  2be4b23
+rgbLED.h / Commit ID:  2be4b23
+
+Participants:
+Dorin Deac
+Tudor Bradescu  (Moderator)
+
+
+
+Findings:
+1. [Improve presentation] Line 212,189 spelling mistake in file rgbLED.c
+2. [Improve presentation] Line 58 spelling mistake in file rgbLED.h
+3. [Functional improvement]Remove 
+
+
+
+
+
+Types of findings:
+[Functional improvement] = Used in case the code doesn't work without the modification or if the functionality is affected by the finding
+[Improve presentation] = Used in case aditional information must be used. The code works as it is, but it's harder to understand
+[Open point] = Used for questions unaswered during the review process
