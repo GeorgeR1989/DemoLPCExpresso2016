@@ -29,7 +29,7 @@ all: leds_joystick.axf
 leds_joystick.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -L"D:\GitHubRepository\work\workspace\Lib_CMSISv1p30_LPC11xx\Debug" -L"D:\GitHubRepository\work\workspace\Lib_MCU\Debug" -L"D:\GitHubRepository\work\workspace\Lib_EaBaseBoard\Debug" -Xlinker --gc-sections -Xlinker -Map=leds_joystick.map -mcpu=cortex-m0 -mthumb -T "lpcxpresso1114_blinky_Debug.ld" -o "leds_joystick.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -L"C:\Users\tudor.bradescu\Desktop\workspace3\Lib_CMSISv1p30_LPC11xx\Debug" -L"C:\Users\tudor.bradescu\Desktop\workspace3\Lib_MCU\Debug" -L"C:\Users\tudor.bradescu\Desktop\workspace3\Lib_EaBaseBoard\Debug" -Xlinker --gc-sections -Xlinker -Map=leds_joystick.map -mcpu=cortex-m0 -mthumb -T "lpcxpresso1114_blinky_Debug.ld" -o "leds_joystick.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build

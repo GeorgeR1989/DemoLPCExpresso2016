@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+environment/buildEnvironmentInclude/com.crt.advproject.config.exe.debug.282889305/CPATH/delimiter=;
+environment/buildEnvironmentInclude/com.crt.advproject.config.exe.debug.282889305/CPATH/operation=remove
+environment/buildEnvironmentInclude/com.crt.advproject.config.exe.debug.282889305/C_INCLUDE_PATH/delimiter=;
+environment/buildEnvironmentInclude/com.crt.advproject.config.exe.debug.282889305/C_INCLUDE_PATH/operation=remove
+environment/buildEnvironmentInclude/com.crt.advproject.config.exe.debug.282889305/append=true
+environment/buildEnvironmentInclude/com.crt.advproject.config.exe.debug.282889305/appendContributed=true
+environment/buildEnvironmentLibrary/com.crt.advproject.config.exe.debug.282889305/LIBRARY_PATH/delimiter=;
+environment/buildEnvironmentLibrary/com.crt.advproject.config.exe.debug.282889305/LIBRARY_PATH/operation=remove
+environment/buildEnvironmentLibrary/com.crt.advproject.config.exe.debug.282889305/append=true
+environment/buildEnvironmentLibrary/com.crt.advproject.config.exe.debug.282889305/appendContributed=true

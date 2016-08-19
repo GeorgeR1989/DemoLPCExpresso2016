@@ -73,7 +73,11 @@ static uint32_t getTicks(void) //return the number of clock ticks
 void init_display (void)
 {
 
+<<<<<<< HEAD
+	/* GPIOInit();
+=======
 	 GPIOInit();
+>>>>>>> 8fbbc685ff1ec4b9acdc28c5a667f79e2cfc6dff
 	    init_timer32(0, 10);
 
 	    UARTInit(115200);
@@ -82,30 +86,21 @@ void init_display (void)
 	    I2CInit( (uint32_t)I2CMASTER, 0 );
 	    SSPInit();
 	    ADCInit( ADC_CLK );
+<<<<<<< HEAD
+*/
+	   /*  oled_init();*/
+=======
 
 	     oled_init();
+>>>>>>> 8fbbc685ff1ec4b9acdc28c5a667f79e2cfc6dff
 	     temp_init (&getTicks);
     /* setup sys Tick. Elapsed time is e.g. needed by temperature sensor */
-    SysTick_Config(SystemCoreClock / 1000);
-    if ( !(SysTick->CTRL & (1<<SysTick_CTRL_CLKSOURCE_Msk)) )
-    {
-      /* When external reference clock is used(CLKSOURCE in
-      Systick Control and register bit 2 is set to 0), the
-      SYSTICKCLKDIV must be a non-zero value and 2.5 times
-      faster than the reference clock.
-      When core clock, or system AHB clock, is used(CLKSOURCE
-      in Systick Control and register bit 2 is set to 1), the
-      SYSTICKCLKDIV has no effect to the SYSTICK frequency. See
-      more on Systick clock and status register in Cortex-M3
-      technical Reference Manual. */
-      LPC_SYSCON->SYSTICKCLKDIV = 0x08;
-    }
 
 
 
-    oled_clearScreen(OLED_COLOR_WHITE);
+   /* oled_clearScreen(OLED_COLOR_WHITE);
 
-    oled_putString(1,1,  (uint8_t*)"Temp   : ", OLED_COLOR_BLACK, OLED_COLOR_WHITE);
+    oled_putString(1,1,  (uint8_t*)"Temp   : ", OLED_COLOR_BLACK, OLED_COLOR_WHITE);*/
 }
 void temp_display(int32_t t)
 {
